@@ -10,13 +10,19 @@ const faulty = (a, b, op) => {
     if (op == '+') {
         return a * b
     }
-    if (op == '-') {
-        return a / b
+    else if (op == '-') {
+        if (b==0){
+            return "Infinite"
+        }
+
+        else{
+            return a/b
+        }
     }
-    if (op == '*') {
+    else if (op == '*') {
         return a - b
     }
-    if (op == '/') {
+    else if (op == '/') {
         return a + b
     }
 }
@@ -25,14 +31,21 @@ const correcty = (a, b, op) => {
     if (op == '+') {
         return a + b
     }
-    if (op == '-') {
+    else if (op == '-') {
         return a - b
     }
-    if (op == '*') {
+    else if (op == '*') {
         return a * b
     }
-    if (op == '/') {
-        return a / b
+    else if (op == '/') {
+
+        if (b==0){
+            return "Infinite"
+        }
+
+        else{
+            return a/b
+        }
     }
 }
 
